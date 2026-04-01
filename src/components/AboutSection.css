@@ -1,0 +1,121 @@
+.about-section {
+  padding: 100px 24px;
+  background: #fff;
+}
+
+.about-section__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section__content {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-section__photo-wrap {
+  flex: 0 0 auto;
+}
+
+.about-section__photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #E8F0E0;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.about-section__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-section__text {
+  flex: 1 1 400px;
+}
+
+.about-section__label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #2D5016;
+}
+
+.about-section__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 8px 0 8px;
+}
+
+.about-section__credentials {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D5016;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.about-section__bio {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-section__bio:last-child {
+  margin-bottom: 0;
+}
+
+/* Made in USA banner */
+.about-section__usa-banner {
+  margin-top: 64px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  background: #f9f9f7;
+  padding: 32px 36px;
+  flex-wrap: wrap;
+}
+
+.about-section__usa-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.about-section__usa-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.about-section__usa-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .about-section__content {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-section__text {
+    text-align: left;
+  }
+}

@@ -1,0 +1,38 @@
+.trust-bar {
+  padding: 60px 24px;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.trust-bar__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+}
+
+.trust-bar__item {
+  text-align: center;
+}
+
+.trust-bar__icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.trust-bar__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.trust-bar__desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #999;
+}

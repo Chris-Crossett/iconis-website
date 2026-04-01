@@ -1,0 +1,404 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 16px;
+  overflow-y: auto;
+}
+
+.modal {
+  background: #fff;
+  max-width: 860px;
+  width: 100%;
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.modal__close:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+.modal__header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal__image-wrap {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  position: relative;
+}
+
+.modal__image-circle {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.modal__image {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+.modal__info {
+  flex: 1 1 300px;
+  padding: 48px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__tagline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.modal__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 8px 0 12px;
+}
+
+.modal__desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.modal__pricing-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.modal__pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.modal__price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.modal__original-price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.modal__buy-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+
+.modal__buy-btn:hover {
+  opacity: 0.9;
+}
+
+.modal__features {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.modal__feature-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  background: rgba(0, 0, 0, 0.04);
+  color: #555;
+}
+
+/* Wholesale banner */
+.modal__wholesale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-top: 16px;
+  border-radius: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.modal__wholesale-cta {
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+
+/* Tabs */
+.modal__tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.modal__tab {
+  flex: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 8px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.modal__body {
+  padding: 32px 36px;
+  min-height: 300px;
+}
+
+/* Ingredients tab */
+.modal__ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal__ingredient {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modal__ingredient:last-child {
+  border-bottom: none;
+}
+
+.modal__ingredient-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.modal__ingredient-content {
+  flex: 1;
+}
+
+.modal__ingredient-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.modal__ingredient-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.modal__ingredient-amount {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.modal__ingredient-detail {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.modal__ingredient-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Directions tab */
+.modal__directions-layout {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.modal__directions-text {
+  flex: 1 1 300px;
+}
+
+.modal__directions-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.modal__directions-title--warning {
+  margin-top: 24px;
+  color: #996633;
+}
+
+.modal__directions-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.75;
+}
+
+.modal__directions-body--small {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.65;
+}
+
+.modal__directions-count {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #888;
+  margin-top: 12px;
+}
+
+.modal__sup-facts {
+  flex: 0 0 220px;
+}
+
+.modal__sup-facts-image {
+  width: 100%;
+  border: 1px solid #eee;
+}
+
+/* Gallery tab */
+.modal__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.modal__gallery-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.modal__gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.modal__gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Disclaimer */
+.modal__disclaimer {
+  padding: 20px 36px;
+  background: #f9f9f7;
+  border-top: 1px solid #eee;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #999;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .modal-overlay {
+    padding: 20px 8px;
+  }
+
+  .modal__body {
+    padding: 24px 20px;
+  }
+
+  .modal__info {
+    padding: 28px 20px;
+  }
+
+  .modal__name {
+    font-size: 28px;
+  }
+
+  .modal__sup-facts {
+    flex: 1 1 100%;
+  }
+}
